@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gs3/provider/account_provider.dart';
+import 'package:gs3/widgets/account_carousel.dart';
+import 'package:provider/provider.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -52,7 +55,14 @@ class Homepage extends StatelessWidget {
                 onPressed: () {}),
           ],
         ),
-        body: Container(),
+        body: ChangeNotifierProvider(
+          create: (ctx) => AccountProvider(),
+          child: const Column(
+            children: [
+              AccountCarousel(),
+            ],
+          ),
+        ),
       ),
     );
   }
