@@ -27,31 +27,9 @@ class AccountProvider with ChangeNotifier {
         ),
       ],
     ),
-    Account(
-      id: '1',
-      name: 'Renner',
-      balanceAmmount: 9999.80,
-      betterDayToBuy: '20',
-      creditCardNumber: '1234 5678 9012 3456',
-      transactions: [
-        Transaction(
-          id: '1',
-          description: 'Apple',
-          amount: 549.99,
-          parcels: 12,
-          date: DateTime.now(),
-        ),
-        Transaction(
-          id: '2',
-          description: 'Uber*Uber*Trip',
-          amount: 12.96,
-          parcels: 1,
-          date: DateTime.now(),
-        ),
-      ],
-    ),
   ];
 
+  // start with the first account selected as default
   int _selectedIndex = 0;
 
   List<Account> get accounts => _accounts;
@@ -65,7 +43,6 @@ class AccountProvider with ChangeNotifier {
 
   void selectAccount(int index) {
     _selectedIndex = index;
-    print('Selected account: ${_accounts[_selectedIndex].name}');
     notifyListeners();
   }
 }
