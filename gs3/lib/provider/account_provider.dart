@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:gs3/services/account_service.dart';
 import '../models/account.dart';
 
 class AccountProvider with ChangeNotifier {
+  final _accountService = AccountService();
+
   // start with a single account
   final List<Account> _accounts = [
     Account(
@@ -41,8 +44,18 @@ class AccountProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  void addAccounts(List<Account> accounts) {
+    _accounts.addAll(accounts);
+    notifyListeners();
+  }
+
   void selectAccount(int index) {
     _selectedIndex = index;
     notifyListeners();
+  }
+
+  Future<void> fetchAndAddAccounts() async {
+    var accounts = await _accountService.fetchNewAccounts();
+    addAccounts(accounts);
   }
 }

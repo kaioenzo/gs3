@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gs3/provider/account_provider.dart';
+import 'package:gs3/services/account_service.dart';
 import 'package:provider/provider.dart';
 
 class AccountCarousel extends StatefulWidget {
@@ -11,6 +12,7 @@ class AccountCarousel extends StatefulWidget {
 
 class _AccountCarouselState extends State<AccountCarousel> {
   PageController pageController = PageController();
+  final AccountService _accountService = AccountService();
 
   @override
   void initState() {
@@ -19,6 +21,7 @@ class _AccountCarouselState extends State<AccountCarousel> {
       initialPage: context.read<AccountProvider>().selectedIndex,
       viewportFraction: 0.8,
     );
+    context.read<AccountProvider>().fetchAndAddAccounts();
   }
 
   @override
