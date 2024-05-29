@@ -35,7 +35,7 @@ class AccountProvider with ChangeNotifier {
           description: 'Carrefour - Extra',
           amount: 349.75,
           parcels: 3,
-          date: DateTime(2024, 05, 22),
+          date: DateTime(2024, 05, 22, 15, 20, 00),
           icon: Icons.shopping_cart_outlined,
         ),
         Transaction(
@@ -43,7 +43,7 @@ class AccountProvider with ChangeNotifier {
           description: 'Extra',
           amount: 349.75,
           parcels: 1,
-          date: DateTime(2024, 05, 22),
+          date: DateTime(2024, 05, 22, 11, 50),
           icon: Icons.shopping_cart_outlined,
         ),
         Transaction(
@@ -51,7 +51,7 @@ class AccountProvider with ChangeNotifier {
           description: 'Marcos Joao',
           amount: 122.0,
           parcels: 1,
-          date: DateTime(2024, 05, 20),
+          date: DateTime(2024, 05, 20, 19, 23),
           icon: Icons.shopping_cart_outlined,
         ),
       ],
