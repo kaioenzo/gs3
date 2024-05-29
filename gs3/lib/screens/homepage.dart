@@ -3,6 +3,7 @@ import 'package:gs3/provider/account_provider.dart';
 import 'package:gs3/widgets/account_carousel.dart';
 import 'package:gs3/widgets/last_buys.dart';
 import 'package:gs3/widgets/my_favorites.dart';
+import 'package:gs3/widgets/shared/bottom_navigation_bar.dart';
 import 'package:provider/provider.dart';
 
 class Homepage extends StatelessWidget {
@@ -19,6 +20,7 @@ class Homepage extends StatelessWidget {
               stops: [0.0, 0.4512])),
       child: Scaffold(
         backgroundColor: Colors.transparent,
+        bottomNavigationBar: bottomNavigationBar(context),
         appBar: AppBar(
           centerTitle: true,
           elevation: 0,
