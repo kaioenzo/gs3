@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Account {
   final String id;
   final String name;
@@ -22,6 +24,19 @@ class Transaction {
   final double amount;
   final DateTime date;
   final int parcels;
+  final Icon icon;
+
+  String get formattedDate {
+    return '${date.day}/${date.month} as /${date.hour}:${date.minute}';
+  }
+
+  String get formattedAmount {
+    return 'R\$ ${amount.toStringAsFixed(2)}';
+  }
+
+  String get formattedParcels {
+    return parcels > 1 ? 'em ${parcels}x' : '';
+  }
 
   Transaction({
     required this.id,
@@ -29,5 +44,6 @@ class Transaction {
     required this.amount,
     required this.parcels,
     required this.date,
+    required this.icon,
   });
 }
