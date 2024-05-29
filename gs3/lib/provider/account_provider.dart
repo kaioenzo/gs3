@@ -20,7 +20,7 @@ class AccountProvider with ChangeNotifier {
           amount: 549.99,
           parcels: 12,
           date: DateTime.now(),
-          icon: const Icon(Icons.phone_iphone_outlined),
+          icon: Icons.phone_iphone_outlined,
         ),
         Transaction(
           id: '2',
@@ -28,7 +28,7 @@ class AccountProvider with ChangeNotifier {
           amount: 12.96,
           parcels: 1,
           date: DateTime.now(),
-          icon: const Icon(Icons.taxi_alert_outlined),
+          icon: Icons.taxi_alert_outlined,
         ),
         Transaction(
           id: '3',
@@ -36,7 +36,7 @@ class AccountProvider with ChangeNotifier {
           amount: 349.75,
           parcels: 3,
           date: DateTime(2024, 05, 22),
-          icon: const Icon(Icons.shopping_cart_outlined),
+          icon: Icons.shopping_cart_outlined,
         ),
         Transaction(
           id: '4',
@@ -44,7 +44,15 @@ class AccountProvider with ChangeNotifier {
           amount: 349.75,
           parcels: 1,
           date: DateTime(2024, 05, 22),
-          icon: const Icon(Icons.shopping_cart_outlined),
+          icon: Icons.shopping_cart_outlined,
+        ),
+        Transaction(
+          id: '5',
+          description: 'Marcos Joao',
+          amount: 122.0,
+          parcels: 1,
+          date: DateTime(2024, 05, 20),
+          icon: Icons.shopping_cart_outlined,
         ),
       ],
     ),
