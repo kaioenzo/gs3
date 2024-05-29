@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gs3/models/favorite_item.dart';
+import 'package:gs3/widgets/shared/default_divider.dart';
 
 class MyFavorites extends StatelessWidget {
   const MyFavorites({super.key});
@@ -127,24 +128,6 @@ class MyFavorites extends StatelessWidget {
           const DefaultDivider()
         ],
       ),
-    );
-  }
-}
-
-class DefaultDivider extends StatelessWidget {
-  final double padding;
-  const DefaultDivider({
-    super.key,
-    this.padding = 16.0,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Divider(
-      color: const Color.fromARGB(255, 218, 213, 213),
-      indent: padding,
-      endIndent: padding,
-      thickness: 1.0,
     );
   }
 }
