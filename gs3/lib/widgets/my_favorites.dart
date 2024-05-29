@@ -50,7 +50,7 @@ class MyFavorites extends StatelessWidget {
                             child: const Text(
                               'Personalizar',
                               style: TextStyle(
-                                fontSize: 8.0,
+                                fontSize: 10.0,
                                 color: Color.fromRGBO(0, 0, 0, 0.7),
                               ),
                             ),
