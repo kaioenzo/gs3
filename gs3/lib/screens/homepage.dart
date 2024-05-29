@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gs3/provider/account_provider.dart';
 import 'package:gs3/widgets/account_carousel.dart';
+import 'package:gs3/widgets/my_favorites.dart';
 import 'package:provider/provider.dart';
 
 class Homepage extends StatelessWidget {
@@ -60,6 +61,7 @@ class Homepage extends StatelessWidget {
           child: const Column(
             children: [
               AccountCarousel(),
+              MyFavorites(),
             ],
           ),
         ),
