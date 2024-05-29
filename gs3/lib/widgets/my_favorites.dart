@@ -141,7 +141,7 @@ class DefaultDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Divider(
-      color: Color.fromARGB(255, 218, 213, 213),
+      color: const Color.fromARGB(255, 218, 213, 213),
       indent: padding,
       endIndent: padding,
       thickness: 1.0,
